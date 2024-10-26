@@ -56,11 +56,43 @@
 								<h3><a href="#">Keyboard dengan fitur mechanical</a></h3>
 								<div class="meta">
 									<span>by <a href="https://unsplash.com/@thekidph">Jan Loyde Cabrera
-</a></span> <span>on <a href="#">Aug 27, 2022</a></span>
+                                    </a></span> <span>on <a href="#">Aug 27, 2022</a></span>
 								</div>
 							</div>
 						</div>
 					</div>
+        <!-- Stop Blog Section -->
+
+		<!-- Start Data Table -->
+        
+		<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Kode</th>
+            <th scope="col">Merek</th>
+            <th scope="col">Tipe</th>
+            <th scope="col">Harga</th>
+            <!--<th scope="col">Action</th>-->
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($produk as $prd): ?>
+            <tr>
+                <th scope="row"><?= $prd['kode']; ?></th>
+                <td><?= $prd['merek']; ?></td>
+                <td><?= $prd['tipe']; ?></td>
+                <td><?= $prd['harga']; ?></td>
+                <!--<td>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editModal<?= $prd['id']; ?>">Ubah</button>
+                    <a href="<?= base_url('produk/hapus/' . $prd['id']); ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin');">Hapus</a>
+                </td>-->
+            </tr>
+        <?php endforeach; ?>
+    </tbody>
+</table>
+
+
+		<!-- Stop Data Table -->
 
         <!-- Start Contact Form -->
 		<div class="untree_co-section">
@@ -166,10 +198,10 @@
 						<div class="row links-wrap">
 							<div class="col-6 col-sm-6 col-md-3">
 								<ul class="list-unstyled">
-									<li><a href="#">About us</a></li>
+									<li><a href="Tentang">Tentang</a></li>
 									<li><a href="#">Services</a></li>
 									<!--<li><a href="#">Blog</a></li>-->
-									<li><a href="#">Kontak</a></li>
+									<li><a href="Kontak">Kontak</a></li>
 								</ul>
 							</div>
 
@@ -189,7 +221,7 @@
 				<div class="border-top copyright">
 					<div class="row pt-4">
 						<div class="col-lg-6">
-							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Untree.co</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ -->
+							<p class="mb-2 text-center text-lg-start">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">Raditya Cahaya Putra</a> Distributed By <a hreff="https://themewagon.com">ThemeWagon</a>  <!-- License information: https://untree.co/license/ -->
             </p>
 						</div>
 

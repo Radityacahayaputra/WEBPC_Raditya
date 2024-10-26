@@ -30,10 +30,10 @@
                 <a class="nav-link" href="Beranda">Beranda</a>
             </li>
             <li><a class="nav-link" href="produk">Produk</a></li>
-            <!--<li><a class="nav-link" href="#">Tentang</a></li>-->
+            <li><a class="nav-link" href="Tentang">Tentang</a></li>
             <!--<li><a class="nav-link" href="services.html">Services</a></li>-->
             <!--<li><a class="nav-link" href="blog.html">Blog</a></li>-->
-            <!--<li><a class="nav-link" href="#">Kontak</a></li>-->
+            <li><a class="nav-link" href="Kontak">Kontak</a></li>
         </ul>
 
         

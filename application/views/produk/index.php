@@ -47,12 +47,12 @@
                 <form action="<?= base_url('produk'); ?>" method="post">
                     <div class="mb-3">
                         <label for="kode" class="form-label">Kode</label>
-                        <input type="text" name="kode" class="form-control" id="kode" placeholder="Masukkan kode" required>
+                        <input type="text" name="kode" class="form-control" id="kode" placeholder="Masukkan kode" >
                         <small class="form-text text-danger"><?= form_error('kode'); ?></small>
                     </div>
                     <div class="mb-3">
                         <label for="merek" class="form-label">Merek</label>
-                        <input type="text" name="merek" class="form-control" id="merek" placeholder="Masukkan merek" required>
+                        <input type="text" name="merek" class="form-control" id="merek" placeholder="Masukkan merek" >
                         <small class="form-text text-danger"><?= form_error('merek'); ?></small>
                     </div>
                     <div class="form group">
@@ -69,7 +69,7 @@
 
                     <div class="mb-3">
                         <label for="harga" class="form-label">Harga</label>
-                        <input type="number" name="harga" class="form-control" id="harga" placeholder="Masukkan harga" step="0.01" required>
+                        <input type="number" name="harga" class="form-control" id="harga" placeholder="Masukkan harga" step="0.01" >
                         <small class="form-text text-danger"><?= form_error('harga'); ?></small>
                     </div>
             </div>
