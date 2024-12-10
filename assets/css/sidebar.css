@@ -1,0 +1,12 @@
+/* CSS untuk sidebar */
+.main-sidebar {
+    transition: margin 0.3s ease; /* Animasi transisi */
+}
+
+.sidebar-collapse {
+    margin-left: -250px; /* Sidebar tertutup */
+}
+
+.sidebar-open {
+    margin-left: 0; /* Sidebar terbuka */
+}

@@ -49,6 +49,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'Beranda';
+$route['default_controller'] = 'Login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['shop'] = 'ProductController/index';       // Untuk halaman daftar produk
+$route['shop/add'] = 'ProductController/add';     // Untuk halaman tambah produk
+$route['shop/save'] = 'ProductController/save';   // Untuk menyimpan produk baru
+$route['dashboard'] = 'dashboard/index';

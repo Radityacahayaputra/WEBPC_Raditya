@@ -34,6 +34,8 @@
             <!--<li><a class="nav-link" href="services.html">Services</a></li>-->
             <!--<li><a class="nav-link" href="blog.html">Blog</a></li>-->
             <li><a class="nav-link" href="Kontak">Kontak</a></li>
+            <!--<li><a class="nav-link" href="Shop">Shop</a></li>-->
+            <a class="nav-link" href="<?= base_url()?>login/logout">Logout</a>
         </ul>
 
         
