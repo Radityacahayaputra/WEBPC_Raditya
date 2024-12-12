@@ -98,10 +98,10 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="assets/images/gantengsekalijir.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Raditya cahaya putra</a>
+          <a href="Adminprofile" class="d-block">Raditya cahaya putra</a>
         </div>
       </div>
 
@@ -138,6 +138,13 @@
                   <p>Kontak</p>
                 </a>
               </li>
+
+              <li class="nav-item">
+                <a href="Adminprofile" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Tentang saya</p>
+                </a>
+              </li>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
@@ -164,24 +171,27 @@
     <!-- /.content-header -->
 
     <!-- Main content -->
-    <section class="content">
-      <div class="container-fluid">
+<section class="content">
+    <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>150</h3>
-
-                <p>Total Data</p>
-              </div>
-              <div class="icon">
-                <i class="ion ion-bag"></i>
-              </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-info">
+                    <div class="inner">
+                        <h3><?= $total_produk; ?></h3> <!-- Menampilkan jumlah produk -->
+                        <p>Total Data</p>
+                    </div>
+                    <div class="icon">
+                        <i class="ion ion-bag"></i>
+                    </div>
+                    <a href="Produk" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
             </div>
-          </div>
+        </div>
+    </div>
+</section>
+
           
        
           

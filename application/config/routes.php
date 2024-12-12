@@ -56,3 +56,5 @@ $route['shop'] = 'ProductController/index';       // Untuk halaman daftar produk
 $route['shop/add'] = 'ProductController/add';     // Untuk halaman tambah produk
 $route['shop/save'] = 'ProductController/save';   // Untuk menyimpan produk baru
 $route['dashboard'] = 'dashboard/index';
+$route['produk/ubah/(:num)'] = 'produk/ubah/$1';
+$route['admincontroller'] = 'AdminController/index';  // Atau sesuai dengan nama controller dan metode yang Anda inginkan

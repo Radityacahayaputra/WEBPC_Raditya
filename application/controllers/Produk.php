@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Produk extends CI_Controller
@@ -29,31 +30,13 @@ class Produk extends CI_Controller
             $this->load->view('produk/index', $data);
             $this->load->view('templates/footer');
         } else {
-            // Menangani upload gambar
-            $upload_data = [];
-            if (!empty($_FILES['gambar']['name'])) {
-                $config['upload_path'] = './uploads/produk/';
-                $config['allowed_types'] = 'jpg|jpeg|png';
-                $config['max_size'] = 2048;
-                $this->load->library('upload', $config);
-
-                if ($this->upload->do_upload('gambar')) {
-                    $upload_data = $this->upload->data();
-                } else {
-                    $this->session->set_flashdata('error', $this->upload->display_errors());
-                    redirect('admincontroller');
-                    return;
-                }
-            }
-
             // Menyiapkan data produk untuk dimasukkan
             $data_input = [
                 'kode' => $this->input->post('kode'),
                 'merek' => $this->input->post('merek'),
                 'tipe' => $this->input->post('tipe'),
                 'harga' => $this->input->post('harga'),
-                'deskripsi' => $this->input->post('deskripsi'),
-                'gambar' => isset($upload_data['file_name']) ? $upload_data['file_name'] : null
+                'deskripsi' => $this->input->post('deskripsi')
             ];
 
             // Memasukkan data ke database
@@ -79,8 +62,15 @@ class Produk extends CI_Controller
             $this->load->view('produk/index', $data);
             $this->load->view('templates/footer');
         } else {
-            // Menangani upload gambar
-            $this->Produk_model->ubahDataProduk($id);
+            // Memperbarui data produk di database
+            $data_input = [
+                'merek' => $this->input->post('merek'),
+                'tipe' => $this->input->post('tipe'),
+                'harga' => $this->input->post('harga'),
+                'deskripsi' => $this->input->post('deskripsi')
+            ];
+
+            $this->Produk_model->ubahDataProduk($id, $data_input);
             $this->session->set_flashdata('flash', 'diubah');
             redirect('admincontroller');
         }
