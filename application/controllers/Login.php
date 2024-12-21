@@ -28,8 +28,6 @@ class Login extends CI_Controller
                 // Redirect berdasarkan role
                 if ($tbl_user['role'] === 'admin') {
                     redirect('dashboard'); // Arahkan ke dashboard untuk admin
-                } else {
-                    redirect('beranda'); // Arahkan ke beranda untuk pengguna biasa
                 }
             } else {
                 $this->session->set_flashdata('massage', '<div class="alert alert-danger" role="alert">Password Salah!</div>');
